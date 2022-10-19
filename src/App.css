@@ -33,7 +33,7 @@
 
 .login-container {
   display: flex;
-  background: linear-gradient(to top left, rgb(5, 120, 5), rgb(10, 159, 10), rgb(5, 120, 5));
+  background: linear-gradient(to top left, rgb(22, 25, 181), rgb(10, 127, 159), rgb(5, 120, 5));
   position: fixed;
   left: 0;
   right: 0;
