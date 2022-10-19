@@ -79,7 +79,7 @@ export default function Post({ heading, para, author, title, postedOn, Id, getAl
             </div>
 
             <div>
-                {comments.map(x => <p> <span>{x}</span>   <i onClick={() => deleteComment(x)} class="fa fa-trash-o" aria-hidden="true"></i>  </p>)}
+                {comments && comments.map(x => <p> <span>{x}</span>   <i onClick={() => deleteComment(x)} class="fa fa-trash-o" aria-hidden="true"></i>  </p>)}
             </div>
 
         </div>
