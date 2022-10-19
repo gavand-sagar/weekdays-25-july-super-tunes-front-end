@@ -1,38 +1,320 @@
-.App {
+.rounded {
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 30px;
+  border-radius: 15px;
+  background: linear-gradient(to right top, purple, red);
+  display: inline-block;
+  color: white;
+  margin: 5px;
+}
+
+.square-button {
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
+
+}
+
+
+.expand-collapse {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid;
+}
+
+
+
+.login-container {
+  display: flex;
+  background: linear-gradient(to top left, rgb(5, 120, 5), rgb(10, 159, 10), rgb(5, 120, 5));
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-container{
+  /* text-align: center; */
+}
+
+.login-form {
+  background: linear-gradient(to right bottom, lightgray, rgb(193, 193, 193), lightgray);
+  padding: 30px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-form input {
+  border: 0;
+  outline: none;
+  height: 30px;
+  margin: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-button {
+  border: 0;
+  background-color: rgb(5, 120, 5);
+  margin: 5px;
+  width: 100px;
+  padding: 0.5em;
+  color: lightgray;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.faq-container {
+  border: 1px solid lightgray;
+  margin: 5px;
+  width: 400px;
+  padding: 10px;
+  position: relative;
+  font-size: 40px;
+}
+
+.faq-container .light-shade-color {
+  color: gray;
+}
+
+.faq-container .blue {
+  color: rgb(17, 17, 188);
+  font-weight: bold
+}
+
+
+.about-page-container {
+  /* position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; */
+
+
+
+  background-color: lightgray;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.orange {
+  background-color: orange;
+  color: black
+}
+
+
+.app-header {
+  background-color: orangered
+}
+
+.row {
+  border-bottom: 1px solid lightgray;
+  height: 4em;
+}
+
+.column {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 4em;
+}
+
+.w-1 {
+  width: 10%;
+}
+
+.w-3 {
+  width: 30%;
+}
+
+.header {
+  background-color: lightgray;
+  font-weight: bold;
+}
+
+.blue {
+  color: #4949c9;
+  font-weight: bold;
+}
+
+.yellow {
+  color: #bc8e0f;
+  font-weight: bold
+}
+
+
+
+
+.tiles-container {
+  background-color: black;
+  color: gray;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.tile {
+  box-sizing: border-box;
+  background-color: #212121;
   color: white;
+  font-weight: bold;
+  width: 300px;
+  height: 150px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+
+.tile-name-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 300;
+  background-color: #3f3e3d;
+  padding: 2px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.red {
+  color: rgb(176, 4, 4);
+}
+
+.yellow-border {
+  border: 5px solid yellow;
+}
+
+
+
+.button-container {
+  background-color: rgb(23, 22, 22);
+  display: inline-block;
+  padding: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  color: gray;
+  text-align: center;
+  position: relative;
+}
+
+.button-icon {
+  font-size: 25px;
+}
+
+.button-floating-count {
+  position: absolute;
+  right: 30px;
+  top: 5px;
+}
+
+.button-floating-arrow {
+  position: absolute;
+  right: 2px;
+  top: 0;
+}
+
+.button-more-options {
+  box-sizing: border-box;
+  text-align: left;
+  position: absolute;
+  background-color: rgb(23, 22, 22);
+  padding: 0.5em;
+  width: 100px;
+  font-size: 0.6em;
+  border: 1px solid gray;
+  left: 90%;
+  top: 20px;
+}
+
+
+.button-thumb {
+  width: 50px;
+  height: 50px;
+  background-color: #212121;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.toggle-button-container {
+  box-sizing: border-box;
+  width: 120px;
+  background-color: red;
+  padding: 5px;
+  height: 60px;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+.toggle-button-container.active {
+  background-color: green;
+}
+
+.active .button-thumb {
+  margin-left: 60px;
+}
+
+.right-top{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+
+.app-header a{
+  text-decoration: none;
+  padding-right: 50px;
+}
+
+.app-header span{
+  font-weight: bold;
+  font-size:2rem;
+  color: wheat;
+}
+
+.links-container{
+  display: inline-block;
+  width: 70%;
+}
+
+.user-information{
+  display: inline-block;
+  width: 30%;
+  height: 70px;
+  text-align: right;
+}
+
+.question-container{
+  border: 1px solid gray;
+  margin: 20px;
+  padding: 20px;
+}
+
+/* 
+.question-form input{
+  height: 30px;
+  font-size: 20px;
+  width: 400px;
+} */
+
+.question-form textarea {
+  height: 250px;
+  width:400px;
+}
+
+.ask-question-page{
+  display: flex;
+  justify-content: center;
+  height: 100%;
 }
