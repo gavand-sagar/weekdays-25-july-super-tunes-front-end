@@ -61,7 +61,7 @@ export default function Posts() {
                                     heading={x.heading} 
                                     author={x.author} 
                                     para={x.content}
-                                    Id={x.Id} 
+                                    Id={x._id} 
                                     comments={x.comments}
                                     likes={x.likes}/>)}
             </div>
