@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Post from '../../Post'
 import { useRouteProtector } from '../../use-route-protector'
+import { commonPost } from '../../utilities';
 
 export default function Posts() {
 
@@ -26,12 +27,7 @@ export default function Posts() {
     const sentPost = () => {
         //send data to server
 
-        fetch(`http://localhost:3001/posts?author=${author}&heading=${heading}&content=${content}`,
-            {
-                method: 'POST'
-            }
-        )
-            .then(s => s.json())
+        commonPost(`http://localhost:3001/posts?author=${author}&heading=${heading}&content=${content}`)
             .then(response => {
                 getAllPosts()
             })
@@ -53,17 +49,17 @@ export default function Posts() {
                 <div><input placeholder='Heading' value={heading} onChange={e => setHeading(e.target.value)} /></div>
                 <div><input placeholder='Content' value={content} onChange={e => setContent(e.target.value)} /></div>
                 <div><button onClick={sentPost}>Send</button></div>
-            </div>    
+            </div>
             <hr />
             <div className='post-container'>
-                {posts.map(x => <Post 
-                                    getAllPosts={getAllPosts} 
-                                    heading={x.heading} 
-                                    author={x.author} 
-                                    para={x.content}
-                                    Id={x._id} 
-                                    comments={x.comments}
-                                    likes={x.likes}/>)}
+                {posts.map(x => <Post
+                    getAllPosts={getAllPosts}
+                    heading={x.heading}
+                    author={x.author}
+                    para={x.content}
+                    Id={x._id}
+                    comments={x.comments}
+                    likes={x.likes} />)}
             </div>
         </div>
     )

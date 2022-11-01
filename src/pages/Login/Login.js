@@ -19,6 +19,7 @@ export default function Login() {
                 if (response.status == true) {
                     localStorage.setItem('IAmAuthenticated', 'true')
                     localStorage.setItem('username', username)
+                    localStorage.setItem('token', response.token)
 
                     navigate(homepageUrl)
                 } else {

@@ -3,7 +3,8 @@ export function commonPost(url, data) {
         {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Token': localStorage.getItem('token')
             },
             body: JSON.stringify(data)
         }
@@ -17,7 +18,8 @@ export function commonPut(url, data) {
         {
             method: 'PUT',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Token': localStorage.getItem('token')
             },
             body: JSON.stringify(data)
         }
@@ -31,7 +33,11 @@ export function commonPut(url, data) {
 export function commonDelete(url) {
     return fetch(url,
         {
-            method: 'DELETE'
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'Token': localStorage.getItem('token')
+            }
         }
     )
         .then(a => a.json())
@@ -40,5 +46,10 @@ export function commonDelete(url) {
 
 
 export function commonGet(url) {
-    return fetch(url).then(a => a.json())
+    return fetch(url, {
+        headers: {
+            'Content-Type': 'application/json',
+            'Token': localStorage.getItem('token')
+        },
+    }).then(a => a.json())
 }
